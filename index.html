@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datalume Decision | A Nova Era das Decisões de Negócios Começou</title>
+  <meta name="description" content="Desbloqueie o poder dos seus dados com Datalume Decision: a inteligência que impulsiona seus resultados. Dados + Luz + Clareza + Decisão.">
+  <meta name="keywords" content="Datalume Decision, Business Intelligence, Inteligência de Negócios, Análise de Dados, Análise Preditiva, Dashboards, Tomada de Decisão">
+  <meta name="theme-color" content="#06040a">
+
+  <!-- OpenGraph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Datalume Decision | Inteligência que Impulsiona Seus Resultados">
+  <meta property="og:description" content="Chega de adivinhações! Transforme seus dados em decisões inteligentes e estratégicas.">
+  <meta property="og:image" content="assets/logo.jpg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#8B3DFF',   /* Cor Principal */
+              violet: '#B66CFF',   /* Cor Violet */
+              coral: '#FF7043',    /* Coral Action */
+              white: '#F5F5F7',    /* Texto Branco */
+              dark: '#06040a',
+              darker: '#040207',
+              card: 'rgba(17, 11, 30, 0.7)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet with Official Brand System -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#06040a] text-[#e2e8f0] antialiased selection:bg-[#FF7043] selection:text-white">
+
+  <!-- Ambient Cursor Glow follower (desktop) -->
+  <div id="cursor-glow"></div>
+
+  <!-- Ambient Light Orbs (Brand Colors) -->
+  <div class="ambient-glow-purple top-10 left-1/4 -translate-x-1/2"></div>
+  <div class="ambient-glow-coral top-96 right-10"></div>
+  <div class="ambient-glow-violet top-[2200px] left-10"></div>
+
+  <!-- =========================================================================
+       HEADER / NAVBAR FLUTUANTE
+       ========================================================================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-xl bg-[#06040a]/85 border-b border-[#B66CFF]/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo Link -->
+      <a href="#" class="flex items-center gap-3.5 group shrink-0">
+        <div class="h-11 flex items-center">
+          <img src="assets/logo.jpg" alt="Datalume Decision Logo" class="h-10 w-auto rounded-lg object-contain brand-logo-glow">
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-4 text-sm font-medium text-slate-300 min-w-0">
+        <a href="#ebooks" class="text-[#FF7043] font-bold hover:text-white flex items-center gap-1 transition-colors whitespace-nowrap">
+          <i class="fas fa-book-open text-xs"></i>
+          <span>E-books</span>
+        </a>
+        <a href="#problema" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">Problema</a>
+        <a href="#solucao" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">Solução</a>
+        <a href="#sobre" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">Sobre</a>
+        <a href="#diferenciais" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">Diferenciais</a>
+        <a href="#processo" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">Como Funciona</a>
+        <a href="#testemunhos" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">Resultados</a>
+        <a href="#faq" class="hover:text-[#B66CFF] transition-colors whitespace-nowrap">FAQ</a>
+      </nav>
+
+      <!-- CTA Button, Social Icons & Mobile Trigger -->
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/charles-daniel-419200142/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-xl bg-slate-900/90 border border-purple-500/30 text-slate-300 hover:text-[#0077B5] hover:border-[#0077B5]/60 hover:scale-105 transition-all duration-300" title="LinkedIn de Charles Daniel (Founder)">
+          <i class="fab fa-linkedin-in text-sm"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/datalumedecision?igsi=MTE0ZHN5ZWI3cDlhdQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-xl bg-slate-900/90 border border-purple-500/30 text-slate-300 hover:text-[#FF7043] hover:border-[#FF7043]/60 hover:scale-105 transition-all duration-300" title="Siga @datalumedecision no Instagram">
+          <i class="fab fa-instagram text-sm"></i>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/channel/UCoX0JM4Qg2_Iq7ue5vxxrpw" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-xl bg-slate-900/90 border border-purple-500/30 text-slate-300 hover:text-[#FF0000] hover:border-[#FF0000]/60 hover:scale-105 transition-all duration-300" title="Canal Datalume Decision no YouTube">
+          <i class="fab fa-youtube text-sm"></i>
+        </a>
+
+        <!-- CTA Button -->
+        <button class="btn-open-demo-modal hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#FF7043] to-[#ff5722] text-[#F5F5F7] font-bold text-xs whitespace-nowrap shadow-[0_0_20px_rgba(255,112,67,0.45)] hover:shadow-[0_0_30px_rgba(255,112,67,0.7)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
+          <i class="fas fa-envelope text-xs"></i>
+          <span>Contato</span>
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-lg bg-slate-900/80 border border-purple-500/20 flex items-center justify-center text-slate-300 hover:text-[#B66CFF] focus:outline-none">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#06040a]/95 backdrop-blur-2xl translate-x-full transition-transform duration-300 flex flex-col p-6 md:hidden">
+    <div class="flex items-center justify-between pb-6 border-b border-purple-500/20">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="Datalume Decision" class="h-9 w-auto rounded-lg object-contain">
+      </div>
+      <button id="mobile-menu-close" class="w-9 h-9 rounded-lg bg-slate-900 border border-purple-500/20 flex items-center justify-center text-slate-400 hover:text-white">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-5 py-8 text-lg font-medium text-slate-300">
+      <a href="#ebooks" class="mobile-nav-link text-[#FF7043] font-bold flex items-center gap-2">
+        <i class="fas fa-book-open text-sm"></i>
+        <span>Nossos 5 E-books</span>
+      </a>
+      <a href="#problema" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">O Problema</a>
+      <a href="#solucao" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">A Solução</a>
+      <a href="#sobre" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">Por Que Existimos (Founder)</a>
+      <a href="#diferenciais" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">Diferenciais</a>
+      <a href="#processo" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">Como Funciona</a>
+      <a href="#testemunhos" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">Resultados</a>
+      <a href="#faq" class="mobile-nav-link hover:text-[#B66CFF] transition-colors">Perguntas Frequentes</a>
+    </nav>
+
+    <div class="mt-auto pt-6 border-t border-purple-500/20 space-y-3">
+      <!-- Redes Sociais Mobile -->
+      <div class="flex gap-3">
+        <a href="https://www.instagram.com/datalumedecision?igsi=MTE0ZHN5ZWI3cDlhdQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-slate-900/90 border border-purple-500/30 text-slate-200 hover:text-[#FF7043] hover:border-[#FF7043]/50 flex items-center justify-center gap-2 text-sm font-semibold transition-colors">
+          <i class="fab fa-instagram text-[#FF7043] text-base"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCoX0JM4Qg2_Iq7ue5vxxrpw" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-slate-900/90 border border-purple-500/30 text-slate-200 hover:text-[#FF0000] hover:border-[#FF0000]/50 flex items-center justify-center gap-2 text-sm font-semibold transition-colors">
+          <i class="fab fa-youtube text-[#FF0000] text-base"></i>
+          <span>YouTube</span>
+        </a>
+      </div>
+      <button class="btn-open-demo-modal w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF7043] to-[#ff5722] text-[#F5F5F7] font-bold text-base shadow-[0_0_25px_rgba(255,112,67,0.5)] flex items-center justify-center gap-2">
+        <span>Entre em Contato Conosco</span>
+        <i class="fas fa-arrow-right text-sm"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       HERO SECTION (HEADLINER & SUBHEADLINER)
+       ========================================================================= -->
+  <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden cyber-grid">
+    <!-- Interactive Background Canvas -->
+    <canvas id="hero-particles" class="absolute inset-0 w-full h-full pointer-events-auto opacity-75"></canvas>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Brand Mantra Badge: DADOS + LUZ + CLAREZA + DECISÃO -->
+      <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-purple-950/70 border border-[#B66CFF]/40 text-[#B66CFF] text-xs font-semibold uppercase tracking-wider mb-8 shadow-[0_0_20px_rgba(139,61,255,0.3)] animate-float">
+        <span class="w-2 h-2 rounded-full bg-[#FF7043] animate-pulse"></span>
+        <span class="font-mono font-bold tracking-widest text-[#F5F5F7]">DADOS</span>
+        <span class="text-[#FF7043]">+</span>
+        <span class="font-mono font-bold tracking-widest text-[#F5F5F7]">LUZ</span>
+        <span class="text-[#FF7043]">+</span>
+        <span class="font-mono font-bold tracking-widest text-[#F5F5F7]">CLAREZA</span>
+        <span class="text-[#FF7043]">+</span>
+        <span class="font-mono font-bold tracking-widest text-[#B66CFF]">DECISÃO</span>
+      </div>
+
+      <!-- Main Headline (Headliner) -->
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#F5F5F7] max-w-5xl mx-auto leading-[1.15] sm:leading-[1.1]">
+        A Nova Era das Decisões de Negócios <span class="text-gradient-brand">Começou</span>
+      </h1>
+
+      <!-- Subtitle (Subheadliner) -->
+      <p class="mt-6 sm:mt-8 text-lg sm:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+        Desbloqueie o poder dos seus dados com <strong class="text-[#F5F5F7] font-semibold">Datalume Decision</strong>: a inteligência que impulsiona seus resultados.
+      </p>
+
+      <!-- Primary Action Buttons (CORAL ACTION) -->
+      <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="#ebooks" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-[#FF7043] via-[#ff5722] to-[#8B3DFF] text-[#F5F5F7] font-extrabold text-base sm:text-lg shadow-[0_0_30px_rgba(255,112,67,0.55)] hover:shadow-[0_0_50px_rgba(255,112,67,0.85)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3 animate-pulse-coral group">
+          <i class="fas fa-book-open"></i>
+          <span>Conhecer os 5 E-books</span>
+          <i class="fas fa-arrow-right text-sm group-hover:translate-x-1.5 transition-transform duration-300"></i>
+        </a>
+        <button class="btn-open-demo-modal w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-800/90 text-[#F5F5F7] border border-[#B66CFF]/30 hover:border-[#FF7043]/50 font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2">
+          <i class="fas fa-headset text-[#FF7043]"></i>
+          <span>Entre em Contato Conosco</span>
+        </button>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-xs sm:text-sm text-slate-400">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-shield-halved text-[#B66CFF]"></i>
+          <span>Segurança de Nível Bancário (SOC 2 & LGPD)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-bolt text-[#FF7043]"></i>
+          <span>Setup Rápido em Menos de 48h</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-emerald-400"></i>
+          <span>Sem Necessidade de Migração Complexa</span>
+        </div>
+      </div>
+
+      <!-- Futuristic HUD Live Dashboard Preview -->
+      <div class="mt-16 sm:mt-20 relative max-w-5xl mx-auto rounded-2xl glass-panel p-3 sm:p-5 glow-border shadow-[0_0_80px_rgba(139,61,255,0.25)] scanline">
+        <div class="rounded-xl bg-[#080512] border border-[#B66CFF]/20 p-4 sm:p-6 overflow-hidden">
+          
+          <!-- Mockup Top Bar -->
+          <div class="flex items-center justify-between pb-4 mb-6 border-b border-purple-500/20">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-[#FF7043]/80"></div>
+              <div class="w-3 h-3 rounded-full bg-[#B66CFF]/80"></div>
+              <span class="text-xs text-slate-400 font-mono ml-2 hidden sm:inline">datalume-decision-executive-hub://live-feed</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-[#B66CFF]/40 text-[#B66CFF] text-[11px] font-mono flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FF7043] animate-ping"></span>
+                MOTOR IA ATIVO
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2026.08.25 • 60 FPS</span>
+            </div>
+          </div>
+
+          <!-- Mockup Metric Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 text-left">
+            <div class="p-4 rounded-xl bg-slate-950/80 border border-[#B66CFF]/20">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span>Vendas Projetadas</span>
+                <i class="fas fa-arrow-trend-up text-[#FF7043]"></i>
+              </div>
+              <div class="text-2xl font-bold text-white font-display">+20.4%</div>
+              <span class="text-[11px] text-[#FF7043] font-medium">↑ vs. trimestre anterior</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950/80 border border-[#B66CFF]/20">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span>Custo Operacional</span>
+                <i class="fas fa-arrow-trend-down text-[#B66CFF]"></i>
+              </div>
+              <div class="text-2xl font-bold text-white font-display">-15.2%</div>
+              <span class="text-[11px] text-[#B66CFF] font-medium">↓ Otimização contínua</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950/80 border border-[#B66CFF]/20">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span>Acurácia Preditiva</span>
+                <i class="fas fa-bullseye text-[#8B3DFF]"></i>
+              </div>
+              <div class="text-2xl font-bold text-white font-display">99.8%</div>
+              <span class="text-[11px] text-[#B66CFF] font-medium">Modelos Neurais Datalume</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950/80 border border-[#B66CFF]/20">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span>Latência Decisória</span>
+                <i class="fas fa-gauge-high text-[#FF7043]"></i>
+              </div>
+              <div class="text-2xl font-bold text-white font-display">5x Mais Rápido</div>
+              <span class="text-[11px] text-[#FF7043] font-medium">Decisões automatizadas</span>
+            </div>
+          </div>
+
+          <!-- Futuristic Visual Stream Simulation -->
+          <div class="h-44 sm:h-52 w-full rounded-xl bg-[#040209] border border-purple-500/20 p-4 relative flex items-end justify-between gap-2 overflow-hidden">
+            <div class="absolute inset-0 cyber-grid-dots opacity-30"></div>
+            
+            <!-- Dynamic Glowing Bars -->
+            <div class="w-full flex items-end justify-between gap-1.5 sm:gap-3 h-full z-10">
+              <div class="w-full bg-gradient-to-t from-[#8B3DFF]/20 to-[#8B3DFF]/80 rounded-t h-[45%] hover:h-[70%] transition-all duration-500 relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#B66CFF] font-mono opacity-0 group-hover:opacity-100 transition-opacity">JAN</span>
+              </div>
+              <div class="w-full bg-gradient-to-t from-[#8B3DFF]/20 to-[#8B3DFF]/80 rounded-t h-[60%] hover:h-[85%] transition-all duration-500 relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#B66CFF] font-mono opacity-0 group-hover:opacity-100 transition-opacity">FEV</span>
+              </div>
+              <div class="w-full bg-gradient-to-t from-[#8B3DFF]/20 to-[#8B3DFF]/80 rounded-t h-[40%] hover:h-[65%] transition-all duration-500 relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#B66CFF] font-mono opacity-0 group-hover:opacity-100 transition-opacity">MAR</span>
+              </div>
+              <div class="w-full bg-gradient-to-t from-[#B66CFF]/20 to-[#B66CFF]/80 rounded-t h-[75%] hover:h-[95%] transition-all duration-500 relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#B66CFF] font-mono opacity-0 group-hover:opacity-100 transition-opacity">ABR</span>
+              </div>
+              <div class="w-full bg-gradient-to-t from-[#B66CFF]/20 to-[#B66CFF]/80 rounded-t h-[55%] hover:h-[80%] transition-all duration-500 relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#B66CFF] font-mono opacity-0 group-hover:opacity-100 transition-opacity">MAI</span>
+              </div>
+              <div class="w-full bg-gradient-to-t from-[#FF7043]/30 to-[#FF7043]/90 rounded-t h-[85%] hover:h-[100%] transition-all duration-500 relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#FF7043] font-mono opacity-0 group-hover:opacity-100 transition-opacity">JUN</span>
+              </div>
+              <div class="w-full bg-gradient-to-t from-[#FF7043] to-[#ff5722] rounded-t h-[98%] shadow-[0_0_25px_rgba(255,112,67,0.7)] relative group">
+                <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] text-[#FF7043] font-mono font-bold">HOJE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO DOS E-BOOKS POWER BI (5 LIVROS DIGITAIS EM DESTAQUE)
+       ========================================================================= -->
+  <section id="ebooks" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/20 cyber-grid overflow-hidden">
+    <!-- Ambient Glows -->
+    <div class="ambient-glow-coral -top-20 left-1/3"></div>
+    <div class="ambient-glow-purple bottom-0 right-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#FF7043] font-mono text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full bg-[#FF7043]/15 border border-[#FF7043]/40 shadow-[0_0_15px_rgba(255,112,67,0.25)] animate-float inline-flex items-center gap-2">
+          <i class="fas fa-book-bookmark text-[#FF7043]"></i>
+          <span>COLEÇÃO EXCLUSIVA DE E-BOOKS</span>
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Transforme Dados em Decisões com <span class="text-gradient-coral">Nossos E-books</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+          Metodologias práticas e modelos de dashboards prontos criados por <strong class="text-white font-semibold">Charles Daniel</strong> para acelerar a maturidade analítica da sua empresa.
+        </p>
+      </div>
+
+      <!-- 5 Ebooks Side-by-Side Grid Container -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch">
+        
+        <!-- EBOOK 1: DESVENDANDO O POWER BI (DESTAQUE #1) -->
+        <div class="ebook-card ebook-card-featured glass-panel-interactive rounded-3xl p-5 flex flex-col justify-between relative group transition-all duration-300">
+          <!-- Top Badge -->
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-[#FF7043] to-[#ff5722] text-[#F5F5F7] font-mono text-[10px] font-extrabold uppercase tracking-wider shadow-[0_0_15px_rgba(255,112,67,0.6)] z-20 whitespace-nowrap">
+            ⭐ GUIA PRINCIPAL • #1
+          </div>
+
+          <div>
+            <!-- Book Cover 3D Image Link (Abre o PDF explicativo em anexo) -->
+            <a href="assets/desvendando-o-power-bi-guia-descritivo.pdf" target="_blank" rel="noopener noreferrer" class="ebook-cover-wrapper block mb-5 overflow-hidden rounded-xl relative group/cover" title="Clique para ler o Guia Descritivo Completo (PDF)">
+              <img src="assets/ebook-desvendando-powerbi.jpg" alt="Ebook Desvendando o Power BI por Charles Daniel" class="ebook-cover-img w-full h-auto object-cover rounded-xl transition-transform duration-300">
+              <!-- Overlay PDF preview hint -->
+              <div class="absolute inset-0 bg-[#06040a]/70 backdrop-blur-sm opacity-0 group-hover/cover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col items-center justify-center text-center p-3">
+                <i class="fas fa-file-pdf text-[#FF7043] text-3xl mb-2 animate-bounce"></i>
+                <span class="text-xs font-bold text-white">Ver Guia Descritivo</span>
+                <span class="text-[10px] text-[#FF7043] font-mono mt-1">Clique para abrir o PDF</span>
+              </div>
+            </a>
+
+            <!-- Category & Tag -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[10px] font-mono font-bold text-[#FF7043] uppercase tracking-wider bg-[#FF7043]/15 px-2 py-0.5 rounded-md">
+                Fundamentos ao Pro
+              </span>
+              <a href="assets/desvendando-o-power-bi-guia-descritivo.pdf" target="_blank" rel="noopener noreferrer" class="text-[10px] text-[#FF7043] hover:text-white font-mono flex items-center gap-1 transition-colors" title="Abrir PDF explicativo">
+                <i class="fas fa-file-pdf"></i>
+                <span>Ver PDF</span>
+              </a>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-bold text-lg text-white mb-2 leading-snug group-hover:text-[#FF7043] transition-colors">
+              Desvendando o Power BI
+            </h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+              Do zero ao profissional: transforme dados brutos em decisões estratégicas de alto impacto.
+            </p>
+          </div>
+
+          <div>
+            <!-- Author & Specs -->
+            <div class="pt-3 pb-4 border-t border-purple-500/20 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>por <strong class="text-slate-200">Charles Daniel</strong></span>
+              <span class="text-[#FF7043]"><i class="fas fa-bolt mr-1"></i>Acesso Imediato</span>
+            </div>
+
+            <!-- Kiwify Checkout Link Button -->
+            <a href="https://pay.kiwify.com.br/dRBU2mv" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#FF7043] to-[#ff5722] text-[#F5F5F7] font-extrabold text-xs shadow-[0_0_25px_rgba(255,112,67,0.6)] hover:shadow-[0_0_40px_rgba(255,112,67,0.9)] flex items-center justify-center gap-2 hover:scale-[1.03] active:scale-[0.98] transition-all animate-pulse-coral">
+              <span>Comprar na Kiwify</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- EBOOK 2: POWER BI COMERCIAL -->
+        <div class="ebook-card glass-panel-interactive rounded-3xl p-5 flex flex-col justify-between relative group transition-all duration-300 border-t-2 border-t-[#B66CFF]">
+          <div>
+            <!-- Book Cover 3D Image Link (Abre o PDF explicativo em anexo) -->
+            <a href="assets/power-bi-comercial-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="ebook-cover-wrapper block mb-5 overflow-hidden rounded-xl relative group/cover" title="Clique para ler o Guia Técnico Completo (PDF)">
+              <img src="assets/ebook-powerbi-comercial.jpg" alt="Ebook Power BI Comercial por Charles Daniel" class="ebook-cover-img w-full h-auto object-cover rounded-xl transition-transform duration-300">
+              <!-- Overlay PDF preview hint -->
+              <div class="absolute inset-0 bg-[#06040a]/70 backdrop-blur-sm opacity-0 group-hover/cover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col items-center justify-center text-center p-3">
+                <i class="fas fa-file-pdf text-[#FF7043] text-3xl mb-2 animate-bounce"></i>
+                <span class="text-xs font-bold text-white">Ver Guia Técnico</span>
+                <span class="text-[10px] text-[#FF7043] font-mono mt-1">Clique para abrir o PDF</span>
+              </div>
+            </a>
+
+            <!-- Category & Tag -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[10px] font-mono font-bold text-[#B66CFF] uppercase tracking-wider bg-purple-950/80 px-2 py-0.5 rounded-md">
+                Vendas & Clientes
+              </span>
+              <a href="assets/power-bi-comercial-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="text-[10px] text-[#FF7043] hover:text-white font-mono flex items-center gap-1 transition-colors" title="Abrir PDF explicativo">
+                <i class="fas fa-file-pdf"></i>
+                <span>Ver PDF</span>
+              </a>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-bold text-lg text-white mb-2 leading-snug group-hover:text-[#B66CFF] transition-colors">
+              Power BI Comercial
+            </h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+              Dashboards para alavancar vendas, retenção de clientes e performance de equipes.
+            </p>
+          </div>
+
+          <div>
+            <!-- Author & Specs -->
+            <div class="pt-3 pb-4 border-t border-purple-500/20 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>por <strong class="text-slate-200">Charles Daniel</strong></span>
+              <span class="text-[#B66CFF]"><i class="fas fa-file-pdf mr-1"></i>PDF + Modelos</span>
+            </div>
+
+            <!-- Customizable Link / Buy Button -->
+            <a href="https://hotmart.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-900 border border-purple-500/30 text-[#F5F5F7] hover:border-[#FF7043] hover:text-white font-bold text-xs flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              <span>Adquirir E-book</span>
+              <i class="fas fa-arrow-right text-[10px] text-[#FF7043]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- EBOOK 3: POWER BI FINANCEIRO -->
+        <div class="ebook-card glass-panel-interactive rounded-3xl p-5 flex flex-col justify-between relative group transition-all duration-300 border-t-2 border-t-[#8B3DFF]">
+          <div>
+            <!-- Book Cover 3D Image Link (Abre o PDF explicativo em anexo) -->
+            <a href="assets/power-bi-financeiro-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="ebook-cover-wrapper block mb-5 overflow-hidden rounded-xl relative group/cover" title="Clique para ler o Guia Técnico Completo (PDF)">
+              <img src="assets/ebook-powerbi-financeiro.jpg" alt="Ebook Power BI Financeiro por Charles Daniel" class="ebook-cover-img w-full h-auto object-cover rounded-xl transition-transform duration-300">
+              <!-- Overlay PDF preview hint -->
+              <div class="absolute inset-0 bg-[#06040a]/70 backdrop-blur-sm opacity-0 group-hover/cover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col items-center justify-center text-center p-3">
+                <i class="fas fa-file-pdf text-[#FF7043] text-3xl mb-2 animate-bounce"></i>
+                <span class="text-xs font-bold text-white">Ver Guia Técnico</span>
+                <span class="text-[10px] text-[#FF7043] font-mono mt-1">Clique para abrir o PDF</span>
+              </div>
+            </a>
+
+            <!-- Category & Tag -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[10px] font-mono font-bold text-[#8B3DFF] uppercase tracking-wider bg-purple-950/80 px-2 py-0.5 rounded-md">
+                Controladoria & Caixa
+              </span>
+              <a href="assets/power-bi-financeiro-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="text-[10px] text-[#FF7043] hover:text-white font-mono flex items-center gap-1 transition-colors" title="Abrir PDF explicativo">
+                <i class="fas fa-file-pdf"></i>
+                <span>Ver PDF</span>
+              </a>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-bold text-lg text-white mb-2 leading-snug group-hover:text-[#B66CFF] transition-colors">
+              Power BI Financeiro
+            </h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+              Dashboards para controlar resultados, fluxo de caixa, margens e gestão de riscos.
+            </p>
+          </div>
+
+          <div>
+            <!-- Author & Specs -->
+            <div class="pt-3 pb-4 border-t border-purple-500/20 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>por <strong class="text-slate-200">Charles Daniel</strong></span>
+              <span class="text-[#8B3DFF]"><i class="fas fa-file-pdf mr-1"></i>PDF + Modelos</span>
+            </div>
+
+            <!-- Customizable Link / Buy Button -->
+            <a href="https://hotmart.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-900 border border-purple-500/30 text-[#F5F5F7] hover:border-[#FF7043] hover:text-white font-bold text-xs flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              <span>Adquirir E-book</span>
+              <i class="fas fa-arrow-right text-[10px] text-[#FF7043]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- EBOOK 4: POWER BI NA PRODUÇÃO -->
+        <div class="ebook-card glass-panel-interactive rounded-3xl p-5 flex flex-col justify-between relative group transition-all duration-300 border-t-2 border-t-[#FF7043]">
+          <div>
+            <!-- Book Cover 3D Image Link (Abre o PDF explicativo em anexo) -->
+            <a href="assets/power-bi-na-producao-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="ebook-cover-wrapper block mb-5 overflow-hidden rounded-xl relative group/cover" title="Clique para ler o Guia Técnico Completo (PDF)">
+              <img src="assets/ebook-powerbi-producao.jpg" alt="Ebook Power BI na Produção por Charles Daniel" class="ebook-cover-img w-full h-auto object-cover rounded-xl transition-transform duration-300">
+              <!-- Overlay PDF preview hint -->
+              <div class="absolute inset-0 bg-[#06040a]/70 backdrop-blur-sm opacity-0 group-hover/cover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col items-center justify-center text-center p-3">
+                <i class="fas fa-file-pdf text-[#FF7043] text-3xl mb-2 animate-bounce"></i>
+                <span class="text-xs font-bold text-white">Ver Guia Técnico</span>
+                <span class="text-[10px] text-[#FF7043] font-mono mt-1">Clique para abrir o PDF</span>
+              </div>
+            </a>
+
+            <!-- Category & Tag -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[10px] font-mono font-bold text-[#FF7043] uppercase tracking-wider bg-[#FF7043]/15 px-2 py-0.5 rounded-md">
+                Indústria & OEE
+              </span>
+              <a href="assets/power-bi-na-producao-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="text-[10px] text-[#FF7043] hover:text-white font-mono flex items-center gap-1 transition-colors" title="Abrir PDF explicativo">
+                <i class="fas fa-file-pdf"></i>
+                <span>Ver PDF</span>
+              </a>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-bold text-lg text-white mb-2 leading-snug group-hover:text-[#FF7043] transition-colors">
+              Power BI na Produção
+            </h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+              Dashboards para aumentar o OEE, disponibilidade, qualidade e reduzir perdas fabris.
+            </p>
+          </div>
+
+          <div>
+            <!-- Author & Specs -->
+            <div class="pt-3 pb-4 border-t border-purple-500/20 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>por <strong class="text-slate-200">Charles Daniel</strong></span>
+              <span class="text-[#FF7043]"><i class="fas fa-file-pdf mr-1"></i>PDF + Modelos</span>
+            </div>
+
+            <!-- Customizable Link / Buy Button -->
+            <a href="https://hotmart.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-900 border border-purple-500/30 text-[#F5F5F7] hover:border-[#FF7043] hover:text-white font-bold text-xs flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              <span>Adquirir E-book</span>
+              <i class="fas fa-arrow-right text-[10px] text-[#FF7043]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- EBOOK 5: POWER BI LOGÍSTICO -->
+        <div class="ebook-card glass-panel-interactive rounded-3xl p-5 flex flex-col justify-between relative group transition-all duration-300 border-t-2 border-t-[#B66CFF]">
+          <div>
+            <!-- Book Cover 3D Image Link (Abre o PDF explicativo em anexo) -->
+            <a href="assets/power-bi-logistico-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="ebook-cover-wrapper block mb-5 overflow-hidden rounded-xl relative group/cover" title="Clique para ler o Guia Técnico Completo (PDF)">
+              <img src="assets/ebook-powerbi-logistico.jpg" alt="Ebook Power BI Logístico por Charles Daniel" class="ebook-cover-img w-full h-auto object-cover rounded-xl transition-transform duration-300">
+              <!-- Overlay PDF preview hint -->
+              <div class="absolute inset-0 bg-[#06040a]/70 backdrop-blur-sm opacity-0 group-hover/cover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col items-center justify-center text-center p-3">
+                <i class="fas fa-file-pdf text-[#FF7043] text-3xl mb-2 animate-bounce"></i>
+                <span class="text-xs font-bold text-white">Ver Guia Técnico</span>
+                <span class="text-[10px] text-[#FF7043] font-mono mt-1">Clique para abrir o PDF</span>
+              </div>
+            </a>
+
+            <!-- Category & Tag -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[10px] font-mono font-bold text-[#B66CFF] uppercase tracking-wider bg-purple-950/80 px-2 py-0.5 rounded-md">
+                Logística & Supply
+              </span>
+              <a href="assets/power-bi-logistico-guia-tecnico.pdf" target="_blank" rel="noopener noreferrer" class="text-[10px] text-[#FF7043] hover:text-white font-mono flex items-center gap-1 transition-colors" title="Abrir PDF explicativo">
+                <i class="fas fa-file-pdf"></i>
+                <span>Ver PDF</span>
+              </a>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-bold text-lg text-white mb-2 leading-snug group-hover:text-[#B66CFF] transition-colors">
+              Power BI Logístico
+            </h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+              Dashboards para reduzir custos operacionais, rotas e aumentar o nível de serviço (SLA).
+            </p>
+          </div>
+
+          <div>
+            <!-- Author & Specs -->
+            <div class="pt-3 pb-4 border-t border-purple-500/20 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>por <strong class="text-slate-200">Charles Daniel</strong></span>
+              <span class="text-[#B66CFF]"><i class="fas fa-file-pdf mr-1"></i>PDF + Modelos</span>
+            </div>
+
+            <!-- Customizable Link / Buy Button -->
+            <a href="https://hotmart.com" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-900 border border-purple-500/30 text-[#F5F5F7] hover:border-[#FF7043] hover:text-white font-bold text-xs flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              <span>Adquirir E-book</span>
+              <i class="fas fa-arrow-right text-[10px] text-[#FF7043]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Combo Bundle Promo Banner -->
+      <div class="mt-14 p-1 rounded-3xl bg-gradient-to-r from-[#FF7043] via-[#8B3DFF] to-[#B66CFF] shadow-[0_0_40px_rgba(255,112,67,0.3)]">
+        <div class="rounded-[22px] bg-[#07040f] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-left">
+            <div class="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#FF7043] uppercase mb-2">
+              <i class="fas fa-gift"></i>
+              <span>PACOTE COMPLETO • 5 EM 1</span>
+            </div>
+            <h4 class="font-display text-xl sm:text-2xl font-bold text-white mb-1">
+              Deseja adquirir a Coleção Completa dos 5 E-books?
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light max-w-xl">
+              Tenha acesso a todos os modelos de dashboards, fórmulas DAX e análises práticas para Vendas, Finanças, Produção e Logística em um único pacote promocional.
+            </p>
+          </div>
+          <a href="https://hotmart.com" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#FF7043] via-[#ff5722] to-[#8B3DFF] text-[#F5F5F7] font-extrabold text-sm sm:text-base shadow-[0_0_25px_rgba(255,112,67,0.6)] hover:scale-105 transition-all flex items-center gap-2">
+            <span>Garantir Combo Completo</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 1: O PROBLEMA (CAOS DE DADOS VS TOMADA DE DECISÃO)
+       ========================================================================= -->
+  <section id="problema" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-rose-400 font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-rose-950/50 border border-rose-500/30">
+          ⚠️ O DIAGNÓSTICO DO MERCADO
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Sua empresa está gerando um <span class="text-gradient-coral">tsunami de dados</span> todos os dias.
+        </h2>
+        <p class="mt-6 text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+          Mas você está realmente usando essa mina de ouro para tomar as melhores decisões? Seus dados estão espalhados em sistemas diferentes, dificultando a análise e a tomada de decisões ágeis e informadas.
+        </p>
+      </div>
+
+      <!-- Interactive Chaos vs Order Simulator Component -->
+      <div id="data-simulation-container" class="mb-20 glass-panel rounded-3xl p-6 sm:p-8 border border-[#B66CFF]/20">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-purple-500/20">
+          <div>
+            <div id="simulation-status-text" class="text-xs font-semibold px-3 py-1 rounded-full bg-rose-950/80 border border-rose-500/30 text-rose-300 inline-flex items-center">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping inline-block mr-2"></span> Estado Atual: Caos e Dados Fragmentados
+            </div>
+            <p id="simulation-status-desc" class="text-sm text-slate-400 mt-2">
+              Múltiplos silos, fluxos desconectados, gargalos operacionais e perda constante de oportunidades.
+            </p>
+          </div>
+
+          <!-- Interactive Simulator Toggle -->
+          <div class="flex items-center gap-2 p-1.5 rounded-2xl bg-slate-950/90 border border-purple-500/20">
+            <button id="btn-view-chaos" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 border bg-rose-500/20 text-rose-300 border-rose-500/50 flex items-center gap-2">
+              <i class="fas fa-shuffle"></i>
+              <span>Ver Caos Tradicional</span>
+            </button>
+            <button id="btn-view-order" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 border border-transparent text-slate-400 hover:text-[#B66CFF] flex items-center gap-2">
+              <i class="fas fa-wand-magic-sparkles text-[#FF7043]"></i>
+              <span>Ativar Datalume Decision</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Canvas Visualizer -->
+        <div class="mt-6 rounded-2xl bg-[#040209] border border-purple-500/20 p-2 sm:p-4 relative flex items-center justify-center overflow-hidden min-h-[360px]">
+          <canvas id="data-simulation-canvas" class="w-full h-[360px]"></canvas>
+        </div>
+      </div>
+
+      <!-- 4 Problem Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Problem Card 1 -->
+        <div class="glass-panel-interactive rounded-2xl p-6 sm:p-8 border-l-4 border-l-rose-500">
+          <div class="w-12 h-12 rounded-xl bg-rose-950/60 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl mb-5 shadow-[0_0_15px_rgba(244,63,94,0.3)]">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-2">Decisões Baseadas em Instintos</h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Confiando mais na intuição do que em dados concretos? Sem métricas claras, cada escolha vira uma aposta arriscada.
+          </p>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="glass-panel-interactive rounded-2xl p-6 sm:p-8 border-l-4 border-l-[#FF7043]">
+          <div class="w-12 h-12 rounded-xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex items-center justify-center text-[#FF7043] text-xl mb-5 shadow-[0_0_15px_rgba(255,112,67,0.3)]">
+            <i class="fas fa-eye-slash"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-2">Perda de Oportunidades</h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Falhando em identificar tendências e insights cruciais? Seus concorrentes identificam o que você nem conseguiu enxergar.
+          </p>
+        </div>
+
+        <!-- Problem Card 3 -->
+        <div class="glass-panel-interactive rounded-2xl p-6 sm:p-8 border-l-4 border-l-[#8B3DFF]">
+          <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-[#8B3DFF]/40 flex items-center justify-center text-[#B66CFF] text-xl mb-5 shadow-[0_0_15px_rgba(139,61,255,0.3)]">
+            <i class="fas fa-gears"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-2">Ineficiência Operacional</h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Processos manuais e burocráticos para análise de dados? Equipes perdendo semanas gerando planilhas desatualizadas.
+          </p>
+        </div>
+
+        <!-- Problem Card 4 -->
+        <div class="glass-panel-interactive rounded-2xl p-6 sm:p-8 border-l-4 border-l-rose-500">
+          <div class="w-12 h-12 rounded-xl bg-rose-950/60 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl mb-5 shadow-[0_0_15px_rgba(244,63,94,0.3)]">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-2">Decisões Lentas</h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Tempo precioso perdido para coletar e processar informações? A demora na resposta custa contratos e lucratividade.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Solution Transition Callout -->
+      <div class="mt-16 text-center">
+        <div class="inline-block p-[1.5px] rounded-3xl bg-gradient-to-r from-rose-500 via-[#8B3DFF] to-[#FF7043] shadow-[0_0_40px_rgba(139,61,255,0.35)]">
+          <div class="px-8 py-6 rounded-[22px] bg-[#090514] text-center max-w-4xl">
+            <p class="text-xl sm:text-2xl font-display font-bold text-[#F5F5F7]">
+              "Chega de adivinhações! Chegou a hora de transformar seus dados em decisões inteligentes e estratégicas."
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 2: A SOLUÇÃO (DATALUME DECISION)
+       ========================================================================= -->
+  <section id="solucao" class="py-24 sm:py-32 relative bg-gradient-to-b from-transparent via-purple-950/15 to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-[#B66CFF] font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-[#B66CFF]/40 shadow-[0_0_15px_rgba(139,61,255,0.25)]">
+          ⚡ A TRANSFORMAÇÃO DEFINITIVA
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          A Solução: Inteligência Completa com <span class="text-gradient-brand">Datalume Decision</span>
+        </h2>
+        <p class="mt-6 text-base sm:text-xl text-slate-300 font-light leading-relaxed">
+          A Datalume Decision é a sua parceira para a era da inteligência de negócios. Nossa plataforma inovadora e completa fornece tudo o que você precisa para tomar decisões mais rápidas, inteligentes e baseadas em dados.
+        </p>
+      </div>
+
+      <!-- 5 Main Features & Benefits Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 relative overflow-hidden group">
+          <div class="w-14 h-14 rounded-2xl bg-purple-600/15 border border-[#8B3DFF]/40 flex items-center justify-center text-[#B66CFF] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#8B3DFF]/30 transition-all duration-300 shadow-[0_0_20px_rgba(139,61,255,0.25)]">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">Centralização de Dados</h3>
+          <p class="text-slate-300 font-light leading-relaxed text-sm">
+            Consolide todos os seus dados em um só lugar. Integre bancos de dados, ERPs, CRMs e planilhas em um único ecossistema seguro e unificado.
+          </p>
+          <div class="mt-6 pt-4 border-t border-purple-500/20 flex items-center gap-2 text-xs text-[#B66CFF] font-mono">
+            <i class="fas fa-circle-check text-[#FF7043]"></i>
+            <span>Zero Silos de Informação</span>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 relative overflow-hidden group">
+          <div class="w-14 h-14 rounded-2xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex items-center justify-center text-[#FF7043] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#FF7043]/30 transition-all duration-300 shadow-[0_0_20px_rgba(255,112,67,0.25)]">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">Visualização Clara</h3>
+          <p class="text-slate-300 font-light leading-relaxed text-sm">
+            Crie dashboards intuitivos e fáceis de entender. Transforme métricas complexas em painéis visuais que qualquer executivo compreende em segundos.
+          </p>
+          <div class="mt-6 pt-4 border-t border-purple-500/20 flex items-center gap-2 text-xs text-[#FF7043] font-mono">
+            <i class="fas fa-circle-check text-[#FF7043]"></i>
+            <span>Painéis Vivos em 60 FPS</span>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 relative overflow-hidden group">
+          <div class="w-14 h-14 rounded-2xl bg-purple-600/15 border border-[#8B3DFF]/40 flex items-center justify-center text-[#B66CFF] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#8B3DFF]/30 transition-all duration-300 shadow-[0_0_20px_rgba(139,61,255,0.25)]">
+            <i class="fas fa-crystal-ball"></i>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">Análise Preditiva</h3>
+          <p class="text-slate-300 font-light leading-relaxed text-sm">
+            Antecipe tendências e tome decisões proativas. Utilize algoritmos de IA avançados para prever comportamentos de mercado antes que eles aconteçam.
+          </p>
+          <div class="mt-6 pt-4 border-t border-purple-500/20 flex items-center gap-2 text-xs text-[#B66CFF] font-mono">
+            <i class="fas fa-circle-check text-[#FF7043]"></i>
+            <span>Previsões com 99.8% de Acurácia</span>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 relative overflow-hidden group">
+          <div class="w-14 h-14 rounded-2xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex items-center justify-center text-[#FF7043] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#FF7043]/30 transition-all duration-300 shadow-[0_0_20px_rgba(255,112,67,0.25)]">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">Automação Inteligente</h3>
+          <p class="text-slate-300 font-light leading-relaxed text-sm">
+            Automatize tarefas repetitivas e ganhe tempo para o estratégico. Gere relatórios automáticos, alertas de anomalia e gatilhos de decisão instantâneos.
+          </p>
+          <div class="mt-6 pt-4 border-t border-purple-500/20 flex items-center gap-2 text-xs text-[#FF7043] font-mono">
+            <i class="fas fa-circle-check text-[#FF7043]"></i>
+            <span>Economize centenas de horas/mês</span>
+          </div>
+        </div>
+
+        <!-- Feature 5 (Spans 2 columns on lg) -->
+        <div class="glass-panel-interactive rounded-3xl p-8 relative overflow-hidden group lg:col-span-2">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div class="max-w-lg">
+              <div class="w-14 h-14 rounded-2xl bg-purple-600/15 border border-[#8B3DFF]/40 flex items-center justify-center text-[#B66CFF] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#8B3DFF]/30 transition-all duration-300 shadow-[0_0_20px_rgba(139,61,255,0.25)]">
+                <i class="fas fa-plug-circle-bolt"></i>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white mb-3">Integração Flexível</h3>
+              <p class="text-slate-300 font-light leading-relaxed text-sm">
+                Conecte-se com as principais ferramentas e sistemas legados sem atrito: SAP, Oracle, Salesforce, HubSpot, PostgreSQL, BigQuery, AWS e muito mais.
+              </p>
+            </div>
+            <!-- Badges Cluster -->
+            <div class="flex flex-wrap gap-2.5 max-w-xs">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/30 text-xs font-mono text-[#F5F5F7]">SAP / ERP</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/30 text-xs font-mono text-[#F5F5F7]">Salesforce</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/30 text-xs font-mono text-[#F5F5F7]">PostgreSQL</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/30 text-xs font-mono text-[#F5F5F7]">HubSpot</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/30 text-xs font-mono text-[#F5F5F7]">BigQuery / AWS</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/30 text-xs font-mono text-[#F5F5F7]">Rest APIs</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       POR QUE A DATALUME DECISION EXISTE (NOSSO FOUNDER & BIOGRAFIA)
+       ========================================================================= -->
+  <section id="sobre" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/20 cyber-grid overflow-hidden">
+    <!-- Ambient Glows -->
+    <div class="ambient-glow-purple -top-24 right-1/4"></div>
+    <div class="ambient-glow-coral bottom-10 left-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Section Tag -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#FF7043] font-mono text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full bg-[#FF7043]/15 border border-[#FF7043]/40 shadow-[0_0_15px_rgba(255,112,67,0.25)] animate-float inline-flex items-center gap-2">
+          <i class="fas fa-compass text-[#FF7043]"></i>
+          <span>NOSSO PROPÓSITO & ORIGEM</span>
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Por que a <span class="text-gradient-brand">Datalume Decision</span> existe
+        </h2>
+      </div>
+
+      <!-- Main Founder & Purpose Grid -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#B66CFF]/25 shadow-[0_0_80px_rgba(0,0,0,0.8)] relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left Column: Founder Photo & Bio Card -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative w-full max-w-md rounded-2xl overflow-hidden glass-panel p-2.5 glow-border shadow-[0_0_40px_rgba(139,61,255,0.35)] group">
+              
+              <!-- Photo Container with Dark Site-Themed Gradient Blend -->
+              <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-[#06040a]">
+                <img src="assets/founder-charles-daniel.jpg" alt="Charles Daniel - Founder da Datalume Decision" class="w-full h-full object-cover object-top filter contrast-[1.05] brightness-95 group-hover:scale-105 transition-transform duration-500">
+                
+                <!-- Bottom Dark Vignette Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#06040a] via-[#06040a]/20 to-transparent"></div>
+
+                <!-- Floating Hologram Badge on Photo -->
+                <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl backdrop-blur-md bg-[#06040a]/85 border border-purple-500/30 text-left">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="font-display font-bold text-white text-base">Charles Daniel</div>
+                      <div class="text-[11px] font-mono text-[#FF7043] font-semibold">Founder & CEO • Datalume Decision</div>
+                    </div>
+                    <!-- LinkedIn Clickable Icon -->
+                    <a href="https://www.linkedin.com/in/charles-daniel-419200142/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-[#0077B5]/20 hover:bg-[#0077B5]/40 border border-[#0077B5]/50 flex items-center justify-center text-[#0077B5] hover:text-white transition-all shadow-[0_0_12px_rgba(0,119,181,0.3)] hover:scale-110" title="Ver LinkedIn de Charles Daniel">
+                      <i class="fab fa-linkedin-in text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Founder Credentials Pills -->
+            <div class="mt-6 flex flex-wrap justify-center gap-2 max-w-md">
+              <span class="px-3 py-1 rounded-full bg-slate-950 border border-purple-500/30 text-[11px] font-mono text-slate-300 flex items-center gap-1.5">
+                <i class="fas fa-briefcase text-[#FF7043]"></i> +15 Anos em Logística & Gestão
+              </span>
+              <span class="px-3 py-1 rounded-full bg-slate-950 border border-purple-500/30 text-[11px] font-mono text-slate-300 flex items-center gap-1.5">
+                <i class="fas fa-brain text-[#B66CFF]"></i> Especialista em Inteligência de Dados
+              </span>
+            </div>
+
+            <!-- Founder LinkedIn CTA Button -->
+            <div class="mt-4 flex items-center gap-3">
+              <a href="https://www.linkedin.com/in/charles-daniel-419200142/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-[#0077B5]/20 hover:bg-[#0077B5]/35 border border-[#0077B5]/50 text-white font-mono text-xs font-semibold shadow-[0_0_20px_rgba(0,119,181,0.3)] hover:scale-105 transition-all flex items-center gap-2" title="Conecte-se com o Founder no LinkedIn">
+                <i class="fab fa-linkedin text-[#0077B5] text-base"></i>
+                <span>Conectar no LinkedIn</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px] text-slate-400 ml-0.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: The Exact Narrative & Bio Copy -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            
+            <div class="flex items-center justify-between gap-4">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/70 border border-[#B66CFF]/30 text-[#B66CFF] text-xs font-mono">
+                <i class="fas fa-quote-left text-[#FF7043]"></i>
+                <span>CARTA DO FUNDADOR</span>
+              </div>
+              <a href="https://www.linkedin.com/in/charles-daniel-419200142/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-[#0077B5] hover:text-white transition-colors">
+                <i class="fab fa-linkedin"></i>
+                <span>linkedin.com/in/charles-daniel</span>
+              </a>
+            </div>
+
+            <!-- Paragraph 1 -->
+            <p class="text-base sm:text-lg text-slate-200 font-light leading-relaxed">
+              Após mais de 15 anos atuando em logística, percebi que os dados só geram valor quando ajudam a transformar problemas em decisões. Foi dessa experiência, unindo conhecimento operacional, gestão e tecnologia, que nasceu a <strong class="text-white font-semibold">Datalume Decision</strong>: uma empresa criada para transformar dados complexos em clareza, estratégia e resultados para as operações.
+            </p>
+
+            <!-- Paragraph 2 -->
+            <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+              Mais do que criar dashboards, revelamos as respostas escondidas nos dados para mostrar onde estão as oportunidades, quais decisões precisam ser tomadas e como transformar informação em resultado.
+            </p>
+
+            <!-- Impact Question Callout Box -->
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-purple-950/60 via-slate-900/80 to-purple-950/40 border-l-4 border-l-[#FF7043] border border-[#B66CFF]/20 shadow-[0_0_30px_rgba(255,112,67,0.15)] my-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#FF7043]/20 border border-[#FF7043]/40 flex-shrink-0 flex items-center justify-center text-[#FF7043] text-lg">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div>
+                  <h4 class="font-display font-bold text-lg sm:text-xl text-[#F5F5F7] italic">
+                    "E se o próximo ganho da sua operação já estiver nos dados que você possui?"
+                  </h4>
+                  <span class="text-xs text-[#FF7043] font-mono font-medium mt-1 block">— Charles Daniel</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 Core Foundations Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-purple-500/20 text-left">
+                <i class="fas fa-truck-ramp-box text-[#FF7043] text-lg mb-2"></i>
+                <div class="font-display font-bold text-white text-sm">Operação Real</div>
+                <div class="text-xs text-slate-400 font-light mt-1">Conhecimento de chão de fábrica e supply chain.</div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-purple-500/20 text-left">
+                <i class="fas fa-bullseye text-[#B66CFF] text-lg mb-2"></i>
+                <div class="font-display font-bold text-white text-sm">Gestão Estratégica</div>
+                <div class="text-xs text-slate-400 font-light mt-1">Foco direto no ROI, margem e redução de custos.</div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-purple-500/20 text-left">
+                <i class="fas fa-bolt text-[#8B3DFF] text-lg mb-2"></i>
+                <div class="font-display font-bold text-white text-sm">Tecnologia Decisória</div>
+                <div class="text-xs text-slate-400 font-light mt-1">Power BI avançado e inteligência preditiva.</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================================
+           BLOCO DE MISSÃO CORPORATIVA
+           ===================================================================== -->
+      <div class="mt-14 p-1 rounded-3xl bg-gradient-to-r from-[#FF7043] via-[#8B3DFF] to-[#B66CFF] shadow-[0_0_50px_rgba(139,61,255,0.25)]">
+        <div class="rounded-[22px] bg-[#07040f] p-8 sm:p-10 flex flex-col md:flex-row items-center gap-8">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-[#FF7043] to-[#8B3DFF] flex-shrink-0 flex items-center justify-center text-white text-3xl sm:text-4xl shadow-[0_0_30px_rgba(255,112,67,0.5)]">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <div class="text-left space-y-2">
+            <div class="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#FF7043] uppercase tracking-wider">
+              <i class="fas fa-flag-checkered"></i>
+              <span>NOSSA MISSÃO</span>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#F5F5F7] leading-snug">
+              Transformar dados em decisões claras e estratégicas, conectando tecnologia, conhecimento operacional e gestão para gerar eficiência, reduzir desperdícios e impulsionar resultados sustentáveis.
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           GRADE DOS 7 VALORES DA DATALUME DECISION
+           ===================================================================== -->
+      <div class="mt-16 sm:mt-20">
+        
+        <!-- Section Subtitle -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-[#B66CFF] font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/30">
+            💎 NOSSOS VALORES
+          </span>
+          <h3 class="font-display text-2xl sm:text-4xl font-extrabold text-[#F5F5F7] mt-4">
+            Princípios que Guiam Nossas Soluções e Parcerias
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base font-light mt-2">
+            O DNA que fundamenta cada algoritmo, relatório e decisão construída para nossos clientes.
+          </p>
+        </div>
+
+        <!-- 7 Values Interactive Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          
+          <!-- Valor 1 -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#FF7043] group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex items-center justify-center text-[#FF7043] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#FF7043]/30 transition-all shadow-[0_0_15px_rgba(255,112,67,0.2)]">
+                <i class="fas fa-crosshairs"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#FF7043] transition-colors">
+                Foco no resultado
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Transformamos análises em ações que geram impacto real para o negócio.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Impacto & ROI
+            </div>
+          </div>
+
+          <!-- Valor 2 -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#8B3DFF] group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-600/15 border border-[#8B3DFF]/40 flex items-center justify-center text-[#B66CFF] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#8B3DFF]/30 transition-all shadow-[0_0_15px_rgba(139,61,255,0.2)]">
+                <i class="fas fa-industry"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#B66CFF] transition-colors">
+                Conhecimento operacional
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Entendemos a realidade das operações antes de propor soluções.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Chão de Fábrica & Supply
+            </div>
+          </div>
+
+          <!-- Valor 3 -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#B66CFF] group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-600/15 border border-[#B66CFF]/40 flex items-center justify-center text-[#B66CFF] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#B66CFF]/30 transition-all shadow-[0_0_15px_rgba(182,108,255,0.2)]">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#B66CFF] transition-colors">
+                Decisões baseadas em dados
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Utilizamos informações confiáveis para reduzir incertezas e orientar escolhas melhores.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Data-Driven Decision
+            </div>
+          </div>
+
+          <!-- Valor 4 -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#FF7043] group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex items-center justify-center text-[#FF7043] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#FF7043]/30 transition-all shadow-[0_0_15px_rgba(255,112,67,0.2)]">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#FF7043] transition-colors">
+                Clareza e simplicidade
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Tornamos dados complexos fáceis de compreender e utilizar.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Luz & Compreensão
+            </div>
+          </div>
+
+          <!-- Valor 5 -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#8B3DFF] group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-600/15 border border-[#8B3DFF]/40 flex items-center justify-center text-[#B66CFF] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#8B3DFF]/30 transition-all shadow-[0_0_15px_rgba(139,61,255,0.2)]">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#B66CFF] transition-colors">
+                Proximidade com o cliente
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Construímos soluções alinhadas aos desafios e objetivos de cada empresa.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Parceria Estratégica
+            </div>
+          </div>
+
+          <!-- Valor 6 -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#B66CFF] group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-600/15 border border-[#B66CFF]/40 flex items-center justify-center text-[#B66CFF] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#B66CFF]/30 transition-all shadow-[0_0_15px_rgba(182,108,255,0.2)]">
+                <i class="fas fa-arrow-trend-up"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#B66CFF] transition-colors">
+                Melhoria contínua
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Buscamos constantemente formas mais eficientes, inteligentes e sustentáveis de fazer melhor.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Evolução Constante
+            </div>
+          </div>
+
+          <!-- Valor 7 (Spans 2 columns on lg/xl for balanced layout) -->
+          <div class="glass-panel-interactive rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-[#FF7043] group sm:col-span-2 lg:col-span-3 xl:col-span-2">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex items-center justify-center text-[#FF7043] text-xl mb-4 group-hover:scale-110 group-hover:bg-[#FF7043]/30 transition-all shadow-[0_0_15px_rgba(255,112,67,0.2)]">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <h4 class="font-display text-lg font-bold text-white mb-2 group-hover:text-[#FF7043] transition-colors">
+                Ética e transparência
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Trabalhamos com responsabilidade, confiança e clareza em todas as relações.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-purple-500/20 text-[10px] font-mono text-slate-400">
+              Confiança & Integridade
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 3: POR QUE DATALUME DECISION? (MÉTRICAS & DIFERENCIAIS)
+       ========================================================================= -->
+  <section id="diferenciais" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-[#FF7043] font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-[#FF7043]/15 border border-[#FF7043]/40 shadow-[0_0_15px_rgba(255,112,67,0.25)]">
+          💎 RESULTADOS COMPROVADOS
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Por que escolher a <span class="text-gradient-coral">Datalume Decision</span>?
+        </h2>
+        <p class="mt-6 text-base sm:text-xl text-slate-300 font-light leading-relaxed">
+          Nós não apenas fornecemos uma ferramenta, nós entregamos resultados concretos.
+        </p>
+      </div>
+
+      <!-- Live Counters Row -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        
+        <div class="glass-panel rounded-2xl p-6 text-center border border-purple-500/20">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-[#FF7043] counter-value mb-2" data-target="20" data-prefix="+" data-suffix="%">+0%</div>
+          <div class="text-sm font-semibold text-white">Aumento em Vendas</div>
+          <div class="text-xs text-slate-400 mt-1">Média em 6 meses de uso</div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-6 text-center border border-purple-500/20">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-[#B66CFF] counter-value mb-2" data-target="15" data-prefix="-" data-suffix="%">-0%</div>
+          <div class="text-sm font-semibold text-white">Custos Operacionais</div>
+          <div class="text-xs text-slate-400 mt-1">Redução via automação</div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-6 text-center border border-purple-500/20">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-[#8B3DFF] counter-value mb-2" data-target="5" data-suffix="x">0x</div>
+          <div class="text-sm font-semibold text-white">Velocidade Decisória</div>
+          <div class="text-xs text-slate-400 mt-1">De semanas para minutos</div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-6 text-center border border-purple-500/20">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-[#F5F5F7] counter-value mb-2" data-target="99.8" data-suffix="%" data-decimals="1">0%</div>
+          <div class="text-sm font-semibold text-white">Acurácia Preditiva</div>
+          <div class="text-xs text-slate-400 mt-1">Algoritmos proprietários</div>
+        </div>
+
+      </div>
+
+      <!-- 4 Differentials Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Differential 1 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex gap-6 items-start">
+          <div class="w-14 h-14 rounded-2xl bg-purple-600/15 border border-[#8B3DFF]/40 flex-shrink-0 flex items-center justify-center text-[#B66CFF] text-2xl shadow-[0_0_15px_rgba(139,61,255,0.25)]">
+            <i class="fas fa-award"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Experiência Comprovada</h3>
+            <p class="text-slate-300 font-light leading-relaxed text-sm">
+              Equipe de especialistas com vasta experiência em inteligência de dados, arquitetura em nuvem e modelagem preditiva de alta complexidade.
+            </p>
+          </div>
+        </div>
+
+        <!-- Differential 2 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex gap-6 items-start">
+          <div class="w-14 h-14 rounded-2xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex-shrink-0 flex items-center justify-center text-[#FF7043] text-2xl shadow-[0_0_15px_rgba(255,112,67,0.25)]">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Tecnologia de Ponta</h3>
+            <p class="text-slate-300 font-light leading-relaxed text-sm">
+              Plataforma desenvolvida com as tecnologias mais modernas e robustas do mercado, garantindo escala infinita, estabilidade e segurança.
+            </p>
+          </div>
+        </div>
+
+        <!-- Differential 3 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex gap-6 items-start">
+          <div class="w-14 h-14 rounded-2xl bg-purple-600/15 border border-[#8B3DFF]/40 flex-shrink-0 flex items-center justify-center text-[#B66CFF] text-2xl shadow-[0_0_15px_rgba(139,61,255,0.25)]">
+            <i class="fas fa-handshake-angle"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Foco no Cliente</h3>
+            <p class="text-slate-300 font-light leading-relaxed text-sm">
+              Atendimento personalizado e suporte dedicado para sua empresa. Você conta com consultores técnicos dedicados para impulsionar sua jornada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Differential 4 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex gap-6 items-start">
+          <div class="w-14 h-14 rounded-2xl bg-[#FF7043]/15 border border-[#FF7043]/40 flex-shrink-0 flex items-center justify-center text-[#FF7043] text-2xl shadow-[0_0_15px_rgba(255,112,67,0.25)]">
+            <i class="fas fa-cubes"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Abordagem Holística</h3>
+            <p class="text-slate-300 font-light leading-relaxed text-sm">
+              Soluções integradas e sob medida para suas necessidades específicas. Não acreditamos em soluções genéricas: moldamos a inteligência ao seu modelo.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 4: O PROCESSO (COMO FUNCIONA O PIPELINE DATALUME)
+       ========================================================================= -->
+  <section id="processo" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/15 cyber-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#B66CFF] font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-[#B66CFF]/40">
+          🚀 JORNADA PASSO A PASSO
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Como funciona a <span class="text-gradient-brand">Datalume Decision</span>?
+        </h2>
+        <p class="mt-6 text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+          É simples: transformamos a complexidade de dados brutos em decisões estratégicas de alto impacto em 5 etapas transparentes.
+        </p>
+      </div>
+
+      <!-- Step Navigation Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <button class="pipeline-step-btn px-5 py-3 rounded-xl border text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 border-[#B66CFF] bg-purple-950/60 text-[#F5F5F7] shadow-[0_0_20px_rgba(139,61,255,0.4)]">
+          <span class="w-6 h-6 rounded-full bg-[#FF7043]/30 text-[#FF7043] flex items-center justify-center text-xs font-mono font-bold">01</span>
+          <span>Conexão</span>
+        </button>
+
+        <button class="pipeline-step-btn px-5 py-3 rounded-xl border text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center text-xs font-mono">02</span>
+          <span>Transformação</span>
+        </button>
+
+        <button class="pipeline-step-btn px-5 py-3 rounded-xl border text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center text-xs font-mono">03</span>
+          <span>Visualização</span>
+        </button>
+
+        <button class="pipeline-step-btn px-5 py-3 rounded-xl border text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center text-xs font-mono">04</span>
+          <span>Análise</span>
+        </button>
+
+        <button class="pipeline-step-btn px-5 py-3 rounded-xl border text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center text-xs font-mono">05</span>
+          <span>Ação</span>
+        </button>
+      </div>
+
+      <!-- Interactive Step HUD Console -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-purple-500/25 relative overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.7)]">
+        <!-- Progress Line Bar -->
+        <div class="w-full bg-slate-900 h-1.5 rounded-full mb-8 overflow-hidden">
+          <div id="pipeline-progress-bar" class="bg-gradient-to-r from-[#8B3DFF] via-[#B66CFF] to-[#FF7043] h-full w-[20%] transition-all duration-500 shadow-[0_0_12px_rgba(255,112,67,0.8)]"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Step Info -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-4">
+              <span id="hud-step-number" class="text-xs font-mono text-[#B66CFF] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-purple-950/80 border border-[#B66CFF]/30">
+                ETAPA 01 / 05
+              </span>
+              <span id="hud-step-badge" class="text-xs font-mono text-[#FF7043] px-3 py-1 rounded-full bg-[#FF7043]/15 border border-[#FF7043]/30">
+                Multi-Source Ingestion Protocol
+              </span>
+            </div>
+
+            <h3 id="hud-step-title" class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+              01. Conexão
+            </h3>
+
+            <p id="hud-step-desc" class="text-slate-300 text-base sm:text-lg font-light leading-relaxed mb-6">
+              Integramos seus sistemas e fontes de dados. Conectores nativos para ERPs, CRMs, Bancos de Dados SQL/NoSQL, APIs e planilhas em nuvem. Sincronização em tempo real sem complexidade de infraestrutura.
+            </p>
+
+            <div class="flex items-center gap-3 p-4 rounded-xl bg-slate-950/80 border border-purple-500/20">
+              <i class="fas fa-shield-check text-[#FF7043] text-lg"></i>
+              <div>
+                <div class="text-xs text-slate-400 font-mono">Performance Garantida:</div>
+                <div id="hud-step-stat" class="text-sm font-bold text-white font-mono">&lt; 15 Minutos para Setup Inicial</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Step HUD Visualizer Graphic -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm rounded-2xl bg-[#040209] border border-purple-500/25 p-8 flex flex-col items-center justify-center text-center relative scanline">
+              <div class="w-24 h-24 rounded-full bg-purple-950/60 border-2 border-[#B66CFF]/40 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(139,61,255,0.4)] animate-pulse-purple">
+                <i id="hud-step-icon" class="fas fa-network-wired text-[#FF7043] text-3xl"></i>
+              </div>
+              <div class="font-mono text-xs text-[#B66CFF] mb-1">PROTOCOLO ATIVO</div>
+              <div class="text-xs text-slate-400 font-mono">Sincronização Criptografada AES-256</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 5: CHAMADA PARA AÇÃO (CTA DE ALTA CONVERSÃO)
+       ========================================================================= -->
+  <section class="py-24 sm:py-32 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Big Holographic Glowing CTA Card (Coral Action Edition) -->
+      <div class="relative rounded-3xl p-8 sm:p-14 lg:p-20 overflow-hidden bg-gradient-to-b from-purple-950/80 to-[#040208] border border-[#FF7043]/50 shadow-[0_0_90px_rgba(255,112,67,0.3)] text-center">
+        
+        <!-- Ambient Internal Glow -->
+        <div class="absolute -top-32 -left-32 w-80 h-80 bg-[#8B3DFF]/25 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-[#FF7043]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF7043]/20 border border-[#FF7043]/40 text-[#FF7043] text-xs font-semibold uppercase tracking-wider mb-6 animate-float">
+            <i class="fas fa-bolt text-[#FF7043]"></i>
+            <span>Transformação Imediata</span>
+          </div>
+
+          <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#F5F5F7] leading-tight">
+            Pronto para dar o <span class="text-gradient-coral">próximo passo</span> rumo à excelência na tomada de decisões?
+          </h2>
+
+          <p class="mt-6 text-lg sm:text-2xl text-slate-300 font-light leading-relaxed">
+            Entre em contato conosco e descubra como a Datalume Decision pode transformar sua empresa!
+          </p>
+
+          <!-- Pulsing CTA Button with Animated Arrow -->
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button class="btn-open-demo-modal w-full sm:w-auto px-10 py-5 rounded-2xl bg-gradient-to-r from-[#FF7043] via-[#ff5722] to-[#8B3DFF] text-[#F5F5F7] font-extrabold text-lg sm:text-xl shadow-[0_0_40px_rgba(255,112,67,0.7)] hover:shadow-[0_0_65px_rgba(255,112,67,0.95)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 animate-pulse-coral group">
+              <span>Entre em Contato Conosco</span>
+              <i class="fas fa-arrow-right text-base group-hover:translate-x-2 transition-transform duration-300"></i>
+            </button>
+          </div>
+
+          <p class="mt-6 text-xs text-slate-400 font-mono">
+            ⚡ Atendimento 100% personalizado • Sem compromisso • Resposta rápida
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 6: TESTEMUNHOS & PROVA SOCIAL
+       ========================================================================= -->
+  <section id="testemunhos" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-[#B66CFF] font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-[#B66CFF]/40 shadow-[0_0_15px_rgba(139,61,255,0.25)]">
+          ⭐ DEPOIMENTOS REAIS
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Não acredite apenas em nossas palavras, <span class="text-gradient-brand">ouça o que nossos clientes têm a dizer</span>:
+        </h2>
+      </div>
+
+      <!-- Testimonial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex flex-col justify-between border-t-2 border-t-[#FF7043]">
+          <div>
+            <!-- Star Rating -->
+            <div class="flex items-center gap-1 text-[#FF7043] text-sm mb-6">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <!-- Result Metric Badge -->
+            <div class="inline-block px-3 py-1 rounded-lg bg-[#FF7043]/20 border border-[#FF7043]/40 text-[#FF7043] font-mono text-xs font-bold mb-4">
+              +20% DE VENDAS
+            </div>
+            <!-- Quote -->
+            <p class="text-slate-200 text-base sm:text-lg font-light leading-relaxed italic mb-8">
+              "A Datalume Decision nos ajudou a aumentar nossas vendas em 20% em apenas seis meses."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-6 border-t border-purple-500/20">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#FF7043] to-[#8B3DFF] flex items-center justify-center font-bold text-white font-display">
+              CE
+            </div>
+            <div>
+              <div class="font-bold text-white text-sm">Carlos Eduardo Mendes</div>
+              <div class="text-xs text-slate-400">Diretor Comercial, TechVanguard Corp</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex flex-col justify-between border-t-2 border-t-[#B66CFF]">
+          <div>
+            <!-- Star Rating -->
+            <div class="flex items-center gap-1 text-[#B66CFF] text-sm mb-6">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <!-- Result Metric Badge -->
+            <div class="inline-block px-3 py-1 rounded-lg bg-purple-950/80 border border-[#B66CFF]/40 text-[#B66CFF] font-mono text-xs font-bold mb-4">
+              -15% CUSTOS OPERACIONAIS
+            </div>
+            <!-- Quote -->
+            <p class="text-slate-200 text-base sm:text-lg font-light leading-relaxed italic mb-8">
+              "Com a Datalume Decision, conseguimos reduzir nossos custos operacionais em 15%."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-6 border-t border-purple-500/20">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#8B3DFF] to-[#B66CFF] flex items-center justify-center font-bold text-white font-display">
+              MS
+            </div>
+            <div>
+              <div class="font-bold text-white text-sm">Mariana Silveira</div>
+              <div class="text-xs text-slate-400">COO, LogiStream Global</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="glass-panel-interactive rounded-3xl p-8 flex flex-col justify-between border-t-2 border-t-[#8B3DFF]">
+          <div>
+            <!-- Star Rating -->
+            <div class="flex items-center gap-1 text-[#FF7043] text-sm mb-6">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <!-- Result Metric Badge -->
+            <div class="inline-block px-3 py-1 rounded-lg bg-purple-950/80 border border-[#8B3DFF]/40 text-[#F5F5F7] font-mono text-xs font-bold mb-4">
+              NPS 98 / MELHOR BI
+            </div>
+            <!-- Quote -->
+            <p class="text-slate-200 text-base sm:text-lg font-light leading-relaxed italic mb-8">
+              "A Datalume Decision é a melhor ferramenta de inteligência de negócios que já usei."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-6 border-t border-purple-500/20">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#8B3DFF] to-[#FF7043] flex items-center justify-center font-bold text-white font-display">
+              RF
+            </div>
+            <div>
+              <div class="font-bold text-white text-sm">Rodrigo Fontes</div>
+              <div class="text-xs text-slate-400">Head de Dados, Nexus Finanças</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 7: FAQ (PERGUNTAS FREQUENTES COM ACORDEÃO INTERATIVO)
+       ========================================================================= -->
+  <section id="faq" class="py-24 sm:py-32 relative border-t border-[#B66CFF]/15">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#FF7043] font-mono text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-[#FF7043]/15 border border-[#FF7043]/40">
+          ❓ ESCLAREÇA SUAS DÚVIDAS
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#F5F5F7] mt-6 leading-tight">
+          Perguntas Frequentes
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300 font-light">
+          Tudo o que você precisa saber sobre a implementação e benefícios da Datalume Decision.
+        </p>
+      </div>
+
+      <!-- Accordion Container -->
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="accordion-item glass-panel rounded-2xl border border-purple-500/20 overflow-hidden transition-all duration-300 active">
+          <button class="accordion-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-lg text-white">O que é a Datalume Decision?</span>
+            <i class="accordion-icon fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6">
+            <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              A Datalume Decision é uma plataforma completa e moderna de Business Intelligence e Tomada de Decisões impulsionada por IA. Ela centraliza dados de múltiplos sistemas legados, planilhas e nuvem, gerando dashboards preditivos em tempo real e automações estratégicas para impulsionar a lucratividade da sua empresa.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item glass-panel rounded-2xl border border-purple-500/20 overflow-hidden transition-all duration-300">
+          <button class="accordion-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-lg text-white">Quais são os benefícios de usar a Datalume Decision?</span>
+            <i class="accordion-icon fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6">
+            <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              Os principais benefícios incluem: aumento médio de 20% nas receitas de vendas, redução de até 15% nos custos operacionais, eliminação total do retrabalho manual com planilhas, tomada de decisões 5x mais rápida com embasamento preditivo e visualização 360° de toda a operação em dashboards vivos.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item glass-panel rounded-2xl border border-purple-500/20 overflow-hidden transition-all duration-300">
+          <button class="accordion-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-lg text-white">Quanto custa a Datalume Decision?</span>
+            <i class="accordion-icon fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6">
+            <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              Nosso modelo é personalizado de acordo com o tamanho da sua operação, quantidade de fontes de dados e usuários necessários. Oferecemos planos sob medida com ROI garantido. Entre em contato conosco para receber uma proposta dimensionada exatamente para suas metas.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item glass-panel rounded-2xl border border-purple-500/20 overflow-hidden transition-all duration-300">
+          <button class="accordion-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-lg text-white">Como recebo os E-books e os arquivos de dashboard?</span>
+            <i class="accordion-icon fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6">
+            <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              O acesso é 100% digital e imediato após a confirmação da compra. Você recebe os livros digitais em formato PDF de alta resolução, além dos arquivos e modelos de Power BI (.pbix) prontos para aplicar na sua empresa com suas próprias bases de dados.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item glass-panel rounded-2xl border border-purple-500/20 overflow-hidden transition-all duration-300">
+          <button class="accordion-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-lg text-white">Como posso entrar em contato conosco?</span>
+            <i class="accordion-icon fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6 pb-6">
+            <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              É muito fácil! Basta clicar no botão "Entre em Contato Conosco" em qualquer parte desta página, preencher os dados da sua empresa e nossa equipe técnica entrará em contato em menos de 2 horas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 8: RODAPÉ FUTURISTA
+       ========================================================================= -->
+  <footer class="py-16 border-t border-[#B66CFF]/20 bg-[#040208] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-purple-500/20">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3.5 mb-4">
+            <img src="assets/logo.jpg" alt="Datalume Decision" class="h-10 w-auto rounded-lg object-contain brand-logo-glow">
+          </div>
+          <p class="text-sm text-slate-400 font-light max-w-sm leading-relaxed mb-6">
+            A plataforma definitiva de inteligência e tomada de decisões corporativas. Transformamos complexidade de dados em lucro e clareza.
+          </p>
+          <!-- Operational System Status -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/80 border border-[#B66CFF]/40 text-[#B66CFF] text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-[#FF7043] animate-ping"></span>
+            <span>Sistemas 100% Operacionais (2026)</span>
+          </div>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div>
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">Navegação</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#problema" class="hover:text-[#B66CFF] transition-colors">O Problema</a></li>
+            <li><a href="#solucao" class="hover:text-[#B66CFF] transition-colors">A Solução</a></li>
+            <li><a href="#diferenciais" class="hover:text-[#B66CFF] transition-colors">Diferenciais</a></li>
+            <li><a href="#processo" class="hover:text-[#B66CFF] transition-colors">Como Funciona</a></li>
+            <li><a href="#testemunhos" class="hover:text-[#B66CFF] transition-colors">Casos de Sucesso</a></li>
+          </ul>
+        </div>
+
+        <!-- Segurança e Redes -->
+        <div>
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">Conecte-se</h4>
+          <div class="flex items-center gap-3 mb-4">
+            <a href="https://www.instagram.com/datalumedecision?igsi=MTE0ZHN5ZWI3cDlhdQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#FF7043]/20 to-purple-600/20 border border-[#FF7043]/50 flex items-center justify-center text-[#FF7043] hover:scale-110 hover:shadow-[0_0_20px_rgba(255,112,67,0.5)] transition-all duration-300" title="Siga @datalumedecision no Instagram">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/charles-daniel-419200142/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-950 border border-purple-500/30 flex items-center justify-center text-slate-400 hover:text-[#0077B5] hover:border-[#0077B5]/50 hover:scale-110 transition-all duration-300" title="LinkedIn de Charles Daniel (Founder)">
+              <i class="fab fa-linkedin-in text-lg"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCoX0JM4Qg2_Iq7ue5vxxrpw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-950 border border-purple-500/30 flex items-center justify-center text-slate-400 hover:text-[#FF0000] hover:border-[#FF0000]/50 hover:scale-110 transition-all duration-300" title="Canal Datalume Decision no YouTube">
+              <i class="fab fa-youtube text-lg"></i>
+            </a>
+          </div>
+          <a href="https://www.instagram.com/datalumedecision?igsi=MTE0ZHN5ZWI3cDlhdQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-mono text-[#FF7043] hover:text-white transition-colors">
+            <i class="fab fa-instagram"></i>
+            <span>@datalumedecision</span>
+          </a>
+          <div class="text-xs text-slate-500 font-mono mt-3">
+            DADOS + LUZ + CLAREZA + DECISÃO
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+        <div>
+          © 2026 Datalume Decision. Todos os direitos reservados.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Privacidade</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Termos de Uso</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Segurança</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL INTERATIVO DE AGENDAMENTO DE DEMONSTRAÇÃO
+       ========================================================================= -->
+  <div id="demo-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-[#06040a]/85 backdrop-blur-md"></div>
+
+    <!-- Modal Card Content -->
+    <div class="relative w-full max-w-lg rounded-3xl glass-panel p-6 sm:p-8 border border-[#B66CFF]/40 shadow-[0_0_80px_rgba(139,61,255,0.4)] z-10 scanline">
+      
+      <!-- Close Button -->
+      <button id="btn-close-modal" class="absolute top-5 right-5 w-8 h-8 rounded-lg bg-slate-900 border border-purple-500/30 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Form View -->
+      <div id="modal-form-content">
+        <div class="flex items-center gap-2 text-[#FF7043] text-xs font-mono font-semibold mb-2">
+          <span class="w-2 h-2 rounded-full bg-[#FF7043] animate-ping"></span>
+          <span>ACESSO VIP • CONTATO DIRETO</span>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-white mb-2">Entre em Contato Conosco</h3>
+        <p class="text-xs text-slate-300 font-light mb-6">
+          Preencha seus dados corporativos e nosso time de especialistas entrará em contato em menos de 2 horas.
+        </p>
+
+        <form id="demo-booking-form" class="space-y-4">
+          <!-- Campo oculto: instrui Formspree a usar o e-mail do visitante como remetente -->
+          <input type="hidden" name="_replyto" id="field-replyto">
+          <!-- Assunto personalizado do e-mail -->
+          <input type="hidden" name="_subject" id="field-subject" value="[Datalume Decision] Novo Contato pelo Site">
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1.5">Seu Nome Completo</label>
+            <input type="text" name="nome" id="field-nome" required placeholder="Ex: Roberto Silva" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-purple-500/30 focus:border-[#FF7043] focus:ring-1 focus:ring-[#FF7043] text-white placeholder-slate-500 text-sm outline-none transition-colors">
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1.5">E-mail para Contato</label>
+            <input type="email" name="email" id="field-email" required placeholder="roberto@suaempresa.com.br" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-purple-500/30 focus:border-[#FF7043] focus:ring-1 focus:ring-[#FF7043] text-white placeholder-slate-500 text-sm outline-none transition-colors">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1.5">Nome da Empresa</label>
+              <input type="text" name="empresa" id="field-empresa" required placeholder="Ex: Nexus Corp" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-purple-500/30 focus:border-[#FF7043] focus:ring-1 focus:ring-[#FF7043] text-white placeholder-slate-500 text-sm outline-none transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1.5">Cargo / Função</label>
+              <input type="text" name="cargo" id="field-cargo" required placeholder="Ex: Diretor de Operações" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-purple-500/30 focus:border-[#FF7043] focus:ring-1 focus:ring-[#FF7043] text-white placeholder-slate-500 text-sm outline-none transition-colors">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1.5">Volume de Dados Estimado</label>
+            <select name="volume_dados" id="field-volume" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-purple-500/30 focus:border-[#FF7043] focus:ring-1 focus:ring-[#FF7043] text-white text-sm outline-none transition-colors">
+              <option>Até 10.000 registros / mês</option>
+              <option>10.000 a 500.000 registros / mês</option>
+              <option>Mais de 500.000 registros / mês (Big Data)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full mt-2 py-4 rounded-xl bg-gradient-to-r from-[#FF7043] via-[#ff5722] to-[#8B3DFF] text-[#F5F5F7] font-extrabold text-sm shadow-[0_0_25px_rgba(255,112,67,0.6)] hover:shadow-[0_0_40px_rgba(255,112,67,0.85)] transition-all duration-300 flex items-center justify-center gap-2">
+            <span>Enviar Mensagem</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State View (Hidden by default) -->
+      <div id="modal-success-content" class="hidden text-center py-6">
+        <div class="w-16 h-16 rounded-full bg-[#FF7043]/20 border-2 border-[#FF7043] flex items-center justify-center text-[#FF7043] text-3xl mx-auto mb-4 shadow-[0_0_30px_rgba(255,112,67,0.5)]">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-white mb-2">Mensagem Enviada com Sucesso!</h3>
+        <p class="text-sm text-slate-300 font-light max-w-sm mx-auto mb-6">
+          Nossa equipe de especialistas entrará em contato em instantes para atender suas necessidades.
+        </p>
+        <button id="btn-reset-demo" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-purple-500/30 text-slate-200 text-sm font-semibold hover:border-[#FF7043] transition-colors">
+          Fechar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating Instagram Quick Action Pill -->
+  <a href="https://www.instagram.com/datalumedecision?igsi=MTE0ZHN5ZWI3cDlhdQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-40 hidden sm:inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full glass-panel border border-[#FF7043]/40 bg-[#06040a]/90 text-xs font-semibold text-white shadow-[0_0_25px_rgba(255,112,67,0.35)] hover:shadow-[0_0_35px_rgba(255,112,67,0.6)] hover:scale-105 transition-all duration-300 group" title="Conecte-se com a Datalume Decision no Instagram">
+    <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#FF7043] to-[#8B3DFF] flex items-center justify-center text-white text-xs shadow-[0_0_10px_rgba(255,112,67,0.5)]">
+      <i class="fab fa-instagram"></i>
+    </div>
+    <span class="font-mono text-slate-200 group-hover:text-white">@datalumedecision</span>
+    <i class="fas fa-arrow-up-right-from-square text-[10px] text-[#FF7043] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+  </a>
+
+  <!-- Custom Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
