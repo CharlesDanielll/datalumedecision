@@ -569,54 +569,85 @@ function initDemoModal() {
     }
   });
 
-  // Handle Form Submission — envia por mailto para datalumedecision@outlook.com
+  // Handle Form Submission — Envia diretamente para Formspree (https://formspree.io/f/xnpqjqvo)
   if (demoForm) {
-    demoForm.addEventListener('submit', (e) => {
+    const errorBanner = document.getElementById('modal-error-banner');
+    const errorText = document.getElementById('modal-error-text');
+    const emailField = document.getElementById('field-email');
+    const replyToField = document.getElementById('field-replyto');
+
+    // Sincronizar email com _replyto do Formspree
+    if (emailField && replyToField) {
+      emailField.addEventListener('input', () => {
+        replyToField.value = emailField.value;
+      });
+    }
+
+    demoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      if (errorBanner) errorBanner.classList.add('hidden');
+
       const submitBtn = demoForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
+      const originalHtml = submitBtn.innerHTML;
 
-      // Coletar dados dos campos
-      const inputs = demoForm.querySelectorAll('input, select, textarea');
-      const labels = demoForm.querySelectorAll('label');
-      let bodyLines = [];
-
-      inputs.forEach((input, index) => {
-        const label = labels[index] ? labels[index].textContent.trim() : `Campo ${index + 1}`;
-        const value = input.value || '(não informado)';
-        bodyLines.push(`${label}: ${value}`);
-      });
-
-      const nome    = demoForm.querySelector('input[type="text"]')?.value || '';
-      const email   = demoForm.querySelector('input[type="email"]')?.value || '';
-      const allText = bodyLines.join('%0D%0A');
-
-      const subject = encodeURIComponent(`[Datalume Decision] Novo Contato — ${nome}`);
-      const body    = encodeURIComponent(
-        `Olá, você recebeu um novo contato pelo site da Datalume Decision!\n\n` +
-        bodyLines.join('\n') +
-        `\n\nResposta para: ${email}`
-      );
+      if (emailField && replyToField) {
+        replyToField.value = emailField.value;
+      }
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> Enviando...';
+      submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> Enviando mensagem...';
 
-      // Abrir cliente de e-mail com dados preenchidos
-      window.location.href = `mailto:datalumedecision@outlook.com?subject=${subject}&body=${body}`;
+      try {
+        const formData = new FormData(demoForm);
+        const endpoint = demoForm.getAttribute('action') || 'https://formspree.io/f/xnpqjqvo';
 
-      setTimeout(() => {
-        if (formContent) formContent.classList.add('hidden');
-        if (successContent) successContent.classList.remove('hidden');
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          demoForm.reset();
+          if (formContent) formContent.classList.add('hidden');
+          if (successContent) successContent.classList.remove('hidden');
+        } else {
+          const data = await response.json().catch(() => ({}));
+          let msg = 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.';
+          if (data && data.errors && data.errors.length > 0) {
+            msg = data.errors.map(err => err.message).join(', ');
+          }
+          if (errorBanner && errorText) {
+            errorText.textContent = msg;
+            errorBanner.classList.remove('hidden');
+          } else {
+            alert(msg);
+          }
+        }
+      } catch (error) {
+        console.error('Erro ao enviar formulário Formspree:', error);
+        const failMsg = 'Falha na conexão ao enviar. Por favor, tente novamente ou fale conosco por datalumedecision@outlook.com.';
+        if (errorBanner && errorText) {
+          errorText.textContent = failMsg;
+          errorBanner.classList.remove('hidden');
+        } else {
+          alert(failMsg);
+        }
+      } finally {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }, 1200);
+        submitBtn.innerHTML = originalHtml;
+      }
     });
   }
 
   if (btnResetDemo) {
     btnResetDemo.addEventListener('click', () => {
       if (demoForm) demoForm.reset();
+      const errorBanner = document.getElementById('modal-error-banner');
+      if (errorBanner) errorBanner.classList.add('hidden');
       if (formContent) formContent.classList.remove('hidden');
       if (successContent) successContent.classList.add('hidden');
       closeModal();

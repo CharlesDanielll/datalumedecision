@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Bar 1 Gradient -->
+    <linearGradient id="bar1Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7028D9"/>
+      <stop offset="100%" stop-color="#8B3DFF"/>
+    </linearGradient>
+
+    <!-- Bar 2 Gradient -->
+    <linearGradient id="bar2Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+
+    <!-- Bar 3 Top Gradient -->
+    <linearGradient id="bar3TopGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#9D4EDD"/>
+      <stop offset="100%" stop-color="#B66CFF"/>
+    </linearGradient>
+
+    <!-- Bar 3 Bottom Gradient -->
+    <linearGradient id="bar3BotGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7E22CE"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Beam Gradient -->
+    <linearGradient id="beamGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B3DFF" stop-opacity="0.85"/>
+      <stop offset="40%" stop-color="#A855F7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Coral Action Flare -->
+    <linearGradient id="coralGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="50%" stop-color="#FF7043"/>
+      <stop offset="100%" stop-color="#FF8A65"/>
+    </linearGradient>
+  </defs>
+
+  <g id="datalume-icon">
+    <!-- Bar 1 (Left Pillar) -->
+    <polygon points="65.0,335.0 171.8,275.5 171.8,456.0 65.0,456.0" fill="url(#bar1Grad)" />
+
+    <!-- Bar 2 (Middle Pillar) -->
+    <polygon points="188.2,154.5 301.2,92.9 301.2,456.0 188.2,456.0" fill="url(#bar2Grad)" />
+
+    <!-- Bridge Bar 1 to 2 at bottom -->
+    <polygon points="171.8,392.4 188.2,361.6 188.2,456.0 171.8,456.0" fill="url(#beamGrad)" />
+
+    <!-- Luminous Beam on Bar 1 & Bar 2 -->
+    <polygon points="118.4,456.0 171.8,382.2 171.8,456.0" fill="url(#beamGrad)" />
+    <polygon points="188.2,361.6 301.2,279.6 301.2,456.0 188.2,456.0" fill="url(#beamGrad)" />
+
+    <!-- Coral Action Flare -->
+    <polygon points="301.2,279.6 340.2,238.6 340.2,378.1 301.2,423.2" fill="url(#coralGrad)" />
+
+    <!-- Bar 3 (Right Pillar - Top) -->
+    <polygon points="340.2,115.5 447.0,56.0 447.0,252.9 340.2,316.5" fill="url(#bar3TopGrad)" />
+
+    <!-- Bar 3 (Right Pillar - Bottom) -->
+    <polygon points="340.2,378.1 447.0,252.9 447.0,456.0 340.2,456.0" fill="url(#bar3BotGrad)" />
+  </g>
+</svg>
